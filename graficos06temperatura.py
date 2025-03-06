@@ -1,20 +1,17 @@
 import matplotlib.pyplot as plt
 
-diaSemana=[]
-temperaturaDia=[]
-print('Nombre del comercial')
-for i in range(7):
-    print('Nombre del dia de la semana')
-    dia=input()
-    print('Temperatura del dia')
-    temp=int(input())
-    diaSemana.append(dia)
-    temperaturaDia.append(temp)
-    
+#CREAMOS UNA LISTA/TUPLA
+semana = ("Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo")
+temperaturas = []
 
-plt.plot(temperaturaDia, diaSemana)
-plt.title('Gráfico de lineas')
-plt.xlabel('Temperatura media')
-plt.ylabel('Día de la semana')
-plt.savefig('images/lineas.png')
+#REALIZAMOS UN BUCLE PARA RELLENAR LOS DATOS
+for i in range(len(semana)):
+    print(f"Introduzca temperatura para {semana[i]}")
+    temp = int(input())
+    temperaturas.append(temp)
+
+plt.plot(semana, temperaturas)
+plt.title("Temperaturas semana 1 de marzo")
+plt.xlabel("Día semana")
+plt.ylabel("Temperatura")
 plt.show()
